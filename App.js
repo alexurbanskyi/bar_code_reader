@@ -10,6 +10,7 @@ import AddGoods from './component/pages/AddGoods';
 import NewClient from './component/pages/NewClient';
 import Main from './component/pages/Main'
 import CheckBarCode from './component/pages/CheckBarCode';
+import ProductsList from './component/pages/ProductsList';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +29,7 @@ const App: () => React$Node = () => {
                         <Stack.Screen name='AddGoods' component={AddGoods} />
                         <Stack.Screen name='NewClient' component={NewClient}/>
                         <Stack.Screen name='CheckBarCode' component={CheckBarCode}/>
+                        <Stack.Screen name='ProductsList' component={ProductsList}/>
                     </Stack.Navigator>
                 </Provider>
             </NavigationContainer>

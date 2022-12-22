@@ -6,13 +6,6 @@ function Main({ navigation }){
 
     const toast = useToast();
     
-    // toast.show('HI!', {
-    //     type: "warning",
-    //     placement: "bottom",
-    //     duration: 4000,
-    // })
-   console.log('RANDER!!!')
-
     return(
         <View style={styles.container}>
            <Pressable 
@@ -33,6 +26,12 @@ function Main({ navigation }){
            >
                 <Text style={styles.buttonTitle} >Check barCode</Text>
            </Pressable>
+           <Pressable 
+            style={({pressed})=>[styles.button, pressed ? styles.buttonPressed : null]}
+            onPress = {() => navigation.navigate('ProductsList')}
+           >
+                <Text style={styles.buttonTitle} >Products List</Text>
+           </Pressable>
         </View>
     );
 }
@@ -46,7 +45,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     button:{
-        backgroundColor: '#f2ea44',
+        backgroundColor: '#6cbce0',
         padding: 10,
         marginVertical: 10,
     },
