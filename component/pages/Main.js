@@ -15,7 +15,6 @@ function Main({ navigation }){
 
     return(
         <View style={styles.container}>
-            <Text>HELLLO!</Text>
            <Pressable 
             style={({pressed})=>[styles.button, pressed ? styles.buttonPressed : null]}
             onPress = {() => navigation.navigate('AddGoods')}
