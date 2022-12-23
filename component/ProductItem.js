@@ -31,14 +31,14 @@ export default ProductItem;
 const styles = StyleSheet.create({
       // item element
     itemContainer: {
-        backgroundColor: 'red',
+        backgroundColor: 'rgba(255, 255, 255, 0.2)',
         flexDirection: 'row',
         marginVertical: 6
         
     },
     productDetails:{
         flex: 1,
-        backgroundColor: 'green',
+        // backgroundColor: 'green',
         justifyContent: 'space-around',
         alignItems: 'center'
         

@@ -9,6 +9,7 @@ import FotoCameraComponent from "../FotoCameraComponent";
 import {addprod} from '../../store/slices/productsSlice' 
 
 import { useToast } from "react-native-toast-notifications";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 function AddGoods({ navigation }){
@@ -23,19 +24,18 @@ function AddGoods({ navigation }){
     const fotoToggleModal = () => {setFotoModalVisible(!isFotoModalVisible)};
 
     const { control, handleSubmit, formState: { errors, isValid}, } = useForm({mode: 'onBlur'});
+    const toast = useToast();
+    const dispatch = useDispatch();
+    
+    //const prodList = useSelector(state => state.productsSlice )
     const isValidData = barData && fotoData && isValid
 
-    // const prodList = useSelector(state => state.productsSlice )
-   
-    const dispatch = useDispatch();
-
-    const toast = useToast();
-
-    function onSubmit(data) {
+    function onSubmit (data) {
         if (isValidData){
             const productData = {barData: barData, fotoData: fotoData, nameProduct: data.name, priceProduct: data.price} 
+           
             dispatch(addprod(productData))
-
+            
             toast.show('Product Created Successfull', {
                 type: "success",
                 placement: "bottom",

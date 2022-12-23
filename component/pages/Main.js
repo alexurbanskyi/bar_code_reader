@@ -1,11 +1,10 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { View, Text, StyleSheet, Pressable } from "react-native";
-import { useToast } from "react-native-toast-notifications";
 
 function Main({ navigation }){
 
-    const toast = useToast();
-    
+//    const prodList = useSelector(state => state.productsSlice )
+
     return(
         <View style={styles.container}>
            <Pressable 

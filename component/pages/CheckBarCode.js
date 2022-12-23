@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
         paddingVertical: 15
     },
     product:{
-        backgroundColor: '#4793f5',
+        backgroundColor: 'rgba(255, 255, 255, 0.2)',
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 15
